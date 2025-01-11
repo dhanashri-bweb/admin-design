@@ -1,18 +1,30 @@
 import React from "react";
+import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import Sidebar from "./components/Sidebar/Sidebar";
 import OrderList from "./components/OrderList/OrderList";
-import { Routes, Route } from "react-router-dom";
+import Login from "./components/Login/Login";
 
 const App = () => {
   return (
     <>
-      <div>
-        <Sidebar />
-        <Navbar />
-      </div>
       <Routes>
-        <Route path="/order-list" element={<OrderList />} />
+        {/* Login Page */}
+        <Route path="/" element={<Login />} />
+
+        {/* Protected Routes */}
+        <Route
+          path="/order-list"
+          element={
+            <>
+              <Sidebar />
+              <Navbar />
+              <div className="main-content">
+                <OrderList />
+              </div>
+            </>
+          }
+        />
       </Routes>
     </>
   );
