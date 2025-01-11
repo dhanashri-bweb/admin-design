@@ -1,0 +1,97 @@
+.order-list {
+  margin-left: 260px; /* Adjust for sidebar width */
+  padding: 20px;
+  
+  min-height: 100vh;
+  margin-top: 8%; /* Push down the table to account for the navbar height */
+  box-sizing: border-box; /* Include padding in height calculations */
+}
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+
+.add-new-btn {
+  padding: 10px 15px;
+  font-size: 14px;
+  border: 2px solid #0f0f0f;
+  border-radius: 5px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+ 
+}
+
+
+.add-new-btn:hover {
+  background-color: #e9ecef;
+}
+
+.order-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.order-table th,
+.order-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.order-table th {
+  background-color: #213f9c;
+  font-weight: bold;
+  color: white;
+}
+.order-table tr{
+  background-color:#edf6ff;
+}
+.order-table tr:hover {
+  background-color: #f9f9f9;
+}
+
+.order-id {
+  color: #f13339;
+  font-weight: bold;
+}
+
+.order-photo {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.stock.in-stock {
+  color: #28a745;
+  font-weight: bold;
+}
+
+.stock.out-of-stock {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+.icon {
+  font-size: 16px;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.delete-icon {
+  color: #dc3545;
+}
+
+.edit-icon{
+  color: #0853a2;
+}
